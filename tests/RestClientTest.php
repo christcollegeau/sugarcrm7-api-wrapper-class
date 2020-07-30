@@ -7,10 +7,10 @@ use PHPUnit\Framework\TestCase;
 class RestClientTest extends TestCase
 {
     //use your host, username, and password
-    private $host = 'https://host/rest/v11/';
-    private $username = '';
-    private $password = '';
-    private $platform = 'api';
+    private $host = 'https://crm.christcollege.edu.au/rest/v10/';
+    private $username = 'daniel.wood';
+    private $password = 'CCRegistrar16';
+    private $platform = 'opi';
 
     private $testGeneratedRecords = [];
 
