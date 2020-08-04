@@ -110,6 +110,22 @@ class Rest
         return $this->client->getPlatform();
     }
 
+    public function getToken()
+    {
+        if (!$this->client->getToken()) {
+            $this->client->setToken($this->client->getNewAuthToken());
+        }
+
+        return $this->client->getToken();
+    }
+
+    public function setToken($token)
+    {
+        $this->client->setToken($token);
+
+        return $this;
+    }
+
     /**
      * Function: create()
      * Parameters:   $module = Record Type
