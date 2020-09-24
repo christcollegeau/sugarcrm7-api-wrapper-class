@@ -290,6 +290,12 @@ class Rest
         return $this->client->getFile($endpoint, $destinationFile);
     }
 
+    public function streamDownload($module, $record, $field)
+    {
+        $endpoint = $module . '/' . $record . '/file/' . $field;
+        return $this->client->getFileAsStream($endpoint);
+    }
+
     /**
      * Function: upload()
      * Parameters: $module = Record Type

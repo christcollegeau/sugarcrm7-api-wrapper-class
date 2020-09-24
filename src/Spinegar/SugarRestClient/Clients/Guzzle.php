@@ -337,6 +337,14 @@ class Guzzle implements ClientInterface
         return true;
     }
 
+    function getFileAsStream($endpoint)
+    {
+        return $this->request('GET', $endpoint,
+            [
+                'decode_content' => false,
+            ], false)->getBody();
+    }
+
     /**
      * Function: postFile()
      * Parameters:
